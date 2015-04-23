@@ -262,11 +262,16 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         private void OnTriggerEnter(Collider collider)
         {
-            if (collider.CompareTag("SpeechDetector"))
+            if (collider.CompareTag("SpeechDetector") && m_CharacterController.isGrounded)
             {
-                dialogue = true;
+                toggleDialogue();
                 collider.enabled = false;
             }
+        }
+
+        public void toggleDialogue()
+        {
+            dialogue = !dialogue;
         }
     }
 }
