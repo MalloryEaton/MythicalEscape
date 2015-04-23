@@ -4,16 +4,13 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - AlarmLight
-  - Enemy
-  - MainLight
   - Fader
-  - WayPoint
-  - Siren
-  - Alarm
   - SF_Door1
   - SF_Door2
   - SF_Door3
+  - CandyText
+  - SpeechDetector
+  - Panel
   layers:
   - Default
   - TransparentFX
