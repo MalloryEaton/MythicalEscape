@@ -6144,6 +6144,52 @@ MeshCollider:
   serializedVersion: 2
   m_Convex: 0
   m_Mesh: {fileID: 4300002, guid: 25712b9d3dd0eb4439390fb8fea8043e, type: 3}
+--- !u!1001 &819716804
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1410215717}
+    m_Modifications:
+    - target: {fileID: 492654, guid: 1a49e8b974a9ed0488d151bd1e014855, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: .270000011
+      objectReference: {fileID: 0}
+    - target: {fileID: 492654, guid: 1a49e8b974a9ed0488d151bd1e014855, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: .0799999982
+      objectReference: {fileID: 0}
+    - target: {fileID: 492654, guid: 1a49e8b974a9ed0488d151bd1e014855, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 492654, guid: 1a49e8b974a9ed0488d151bd1e014855, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 492654, guid: 1a49e8b974a9ed0488d151bd1e014855, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 492654, guid: 1a49e8b974a9ed0488d151bd1e014855, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 492654, guid: 1a49e8b974a9ed0488d151bd1e014855, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 492654, guid: 1a49e8b974a9ed0488d151bd1e014855, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 13517240, guid: 1a49e8b974a9ed0488d151bd1e014855, type: 2}
+      propertyPath: m_Radius
+      value: 2.81340528
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 1a49e8b974a9ed0488d151bd1e014855, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &833319303
 Prefab:
   m_ObjectHideFlags: 0
@@ -10773,6 +10819,10 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5c2042596b42ab741a95d1e52fd33f71, type: 2}
   m_IsPrefabParent: 0
+--- !u!4 &1410215717
+Transform:
+  m_PrefabParentObject: {fileID: 400000, guid: 5c2042596b42ab741a95d1e52fd33f71, type: 2}
+  m_PrefabInternal: {fileID: 1410215716}
 --- !u!1001 &1427826468
 Prefab:
   m_ObjectHideFlags: 0
