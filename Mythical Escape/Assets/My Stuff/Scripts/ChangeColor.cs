@@ -11,41 +11,43 @@ public class ChangeColor : MonoBehaviour
 
     private float xPos;
 
-    Renderer rend;
+    private Renderer rend;
+
+    private CheckColorPuzzle ccp;
+
+    private GameObject msd;
 
     void Start()
     {
+        ccp = Component.FindObjectOfType<CheckColorPuzzle>();
+        msd = GameObject.Find("DoorsScriptObjectThing");
         rend = GetComponent<Renderer>();
         rend.material.color = colors[Random.Range(0, colors.Length)];
     }
 
     void OnMouseUp()
     {
-        xPos = transform.localPosition.x;
-        if(xPos == cube1.transform.position.x)
+        if (!ccp.checkColors())
         {
-            changeColor();
-        }
-        else if (xPos == cube2.transform.position.x)
-        {
-            changeColor();
-        }
-        else if (xPos == cube3.transform.position.x)
-        {
-            changeColor();
-        }
+            xPos = transform.localPosition.x;
+            if (xPos == cube1.transform.position.x)
+            {
+                changeColor();
+            }
+            else if (xPos == cube2.transform.position.x)
+            {
+                changeColor();
+            }
+            else if (xPos == cube3.transform.position.x)
+            {
+                changeColor();
+            }
 
-        checkIsCorrect();
-    }
-
-    void checkIsCorrect()
-    {
-        //if (cube1IsCorrect && cube2IsCorrect && cube3IsCorrect)
-        //{
-         //   Debug.Log("You remembered the colors :)");
-            //return true;
-       // }
-        //return false;
+            if (ccp.checkColors())
+            {
+                Application.LoadLevel("Computer");
+            }
+        }
     }
 
     void changeColor()

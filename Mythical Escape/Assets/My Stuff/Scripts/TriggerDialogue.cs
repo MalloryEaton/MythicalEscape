@@ -46,6 +46,8 @@ public class TriggerDialogue : MonoBehaviour
                 panel.enabled = false;
                 output.enabled = false;
                 fpc.toggleDialogue();
+
+                Application.LoadLevel("MainScene");
             }
         }
     }

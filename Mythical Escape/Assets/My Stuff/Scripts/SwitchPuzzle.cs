@@ -20,13 +20,11 @@ public class SwitchPuzzle : MonoBehaviour
     float yUP = 0.28f;
     float yDown = -0.25f;
 
-    private bool isUp1 = false;
-    private bool isUp2 = false;
-    private bool isUp3 = false;
-    private bool isUp4 = false;
-    private bool isUp5 = false;
-
-    private bool puzzleIsWon = false;
+    private bool isUp1 = true;
+    private bool isUp2 = true;
+    private bool isUp3 = true;
+    private bool isUp4 = true;
+    private bool isUp5 = true;
 
     private bool isCorrect()
     {
@@ -55,7 +53,7 @@ public class SwitchPuzzle : MonoBehaviour
 
     void OnMouseUp()
     {
-        if (!puzzleIsWon)
+        if (!isCorrect())
         {
             xPos = transform.localPosition.x;
             zPos = transform.localPosition.z;
@@ -120,10 +118,9 @@ public class SwitchPuzzle : MonoBehaviour
                 }
             }
 
-            if (isCorrect())
+            if(isCorrect())
             {
-                Debug.Log("You Won!!!");
-                puzzleIsWon = true;
+                Application.LoadLevel("Shrooms");
             }
         }
     }

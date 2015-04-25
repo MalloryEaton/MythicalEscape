@@ -48,7 +48,7 @@ public class SlidingPuzzle : MonoBehaviour
         {
             solvePuzzle();
             puzzleIsWon = true;
-            GameObject.Find("Text").GetComponent<GUIText>().text = "You Won!";
+            Application.LoadLevel("Marshmallow");
         }
     }
 
@@ -66,7 +66,7 @@ public class SlidingPuzzle : MonoBehaviour
         if(HasWon())
         {
             puzzleIsWon = true;
-            GameObject.Find("Text").GetComponent<GUIText>().text = "You Won!";
+            Application.LoadLevel("Marshmallow");
         }
     }
 

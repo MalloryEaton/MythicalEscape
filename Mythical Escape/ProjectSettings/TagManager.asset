@@ -11,6 +11,9 @@ TagManager:
   - CandyText
   - SpeechDetector
   - Panel
+  - SlidingPuzzle
+  - SwitchesPuzzle
+  - ColorPuzzle
   layers:
   - Default
   - TransparentFX

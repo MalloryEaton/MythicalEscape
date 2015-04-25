@@ -14,7 +14,7 @@ GameObject:
   - 111: {fileID: 11157336}
   m_Layer: 0
   m_Name: door
-  m_TagString: SF_Door
+  m_TagString: SF_Door2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -81,10 +81,10 @@ GameObject:
   - 23: {fileID: 2395284}
   - 65: {fileID: 6532508}
   - 135: {fileID: 13523114}
-  - 114: {fileID: 11442948}
+  - 114: {fileID: 11476490}
   m_Layer: 0
   m_Name: base
-  m_TagString: Untagged
+  m_TagString: SF_Door2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -145,7 +145,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 191652}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.9799995, y: 11.3999996, z: 10.0100002}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 453356}
@@ -330,7 +330,7 @@ Animation:
   m_PlayAutomatically: 0
   m_AnimatePhysics: 0
   m_CullingType: 0
---- !u!114 &11442948
+--- !u!114 &11476490
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -338,7 +338,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 197040}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a45c5a622e8b2db40abad4f3a6e8dbbf, type: 3}
+  m_Script: {fileID: 11500000, guid: 6497402214429094d89b5b04637d5e69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!135 &13523114
@@ -351,7 +351,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 3
+  m_Radius: 5
   m_Center: {x: -9.55415789e-16, y: -4.99520581e-07, z: .0761125237}
 --- !u!1001 &100100000
 Prefab:
