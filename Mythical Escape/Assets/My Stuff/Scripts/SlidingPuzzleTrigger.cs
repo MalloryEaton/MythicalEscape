@@ -4,9 +4,7 @@ using UnityEngine.UI;
 
 public class SlidingPuzzleTrigger : MonoBehaviour 
 {
-    private Component elMusico;
     private GameObject door;
-    private GameObject player;
 
     public string[] dialogue;
     private Text output;
@@ -16,10 +14,7 @@ public class SlidingPuzzleTrigger : MonoBehaviour
 
     void Awake()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
         door = GameObject.FindGameObjectWithTag("SF_Door1");
-        elMusico = GameObject.Find("FirstPersonCharacter").GetComponent<AudioSource>();
-        DontDestroyOnLoad(elMusico);
         panel = GameObject.FindGameObjectWithTag("Panel").GetComponent<Image>();
         output = GameObject.FindGameObjectWithTag("CandyText").GetComponent<Text>();
         panel.enabled = false;
@@ -36,8 +31,6 @@ public class SlidingPuzzleTrigger : MonoBehaviour
 
     void OnTriggerEnter(Collider collider)
     {
-        //door.GetComponent<Animation>().Play("open");
-
         if (collider.CompareTag("Player"))
         {
             output.enabled = true;
@@ -48,7 +41,6 @@ public class SlidingPuzzleTrigger : MonoBehaviour
 
     void OnTriggerExit(Collider collider)
     {
-        //door.GetComponent<Animation>().Play("close");
         if (collider.CompareTag("Player"))
         {
             output.enabled = false;

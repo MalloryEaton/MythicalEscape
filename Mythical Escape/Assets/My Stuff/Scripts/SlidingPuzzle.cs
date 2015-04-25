@@ -42,19 +42,30 @@ public class SlidingPuzzle : MonoBehaviour
     float xtemp;
     float ytemp;
 
+    private Booleans bools;
+
+    private GameObject elMusico;
+
+    void Awake()
+    {
+        bools = Component.FindObjectOfType<Booleans>();
+        //elMusico = GameObject.Find("Music");
+    }
+
     void Update()
     {
         if (Input.GetKey(KeyCode.LeftShift) && Input.GetKey(KeyCode.S))
         {
             solvePuzzle();
             puzzleIsWon = true;
-            Application.LoadLevel("Marshmallow");
+            bools.toggleDoor1();
+            //Destroy(elMusico);
+            Application.LoadLevel("MainScene");
         }
     }
 
     void OnMouseUp()
     {
-        //If the Distance between tiles is 1 then swap tiles
         if (Vector3.Distance(transform.localPosition, slot.transform.position) == 1 && !puzzleIsWon)
         {
             xtemp = transform.localPosition.x;
@@ -66,7 +77,8 @@ public class SlidingPuzzle : MonoBehaviour
         if(HasWon())
         {
             puzzleIsWon = true;
-            Application.LoadLevel("Marshmallow");
+            bools.toggleDoor1();
+            Application.LoadLevel("MainScene");
         }
     }
 

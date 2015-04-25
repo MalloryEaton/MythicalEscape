@@ -9,22 +9,28 @@ public class TriggerDialogue : MonoBehaviour
     private Text output;
     private Image panel;
     private FirstPersonController fpc;
+
+    private GameObject introText;
+    private GameObject outroText;
  
     private int curLine = 0;
  
     void Awake()
     {
-        fpc = Component.FindObjectOfType<FirstPersonController>();
         panel = GameObject.FindGameObjectWithTag("Panel").GetComponent<Image>();
         output = GameObject.FindGameObjectWithTag("CandyText").GetComponent<Text>();
+        introText = GameObject.Find("IntroSpeech");
+        outroText = GameObject.Find("OutroSpeech");
         panel.enabled = false;
         output.enabled = false;
+        fpc = Component.FindObjectOfType<FirstPersonController>();
     }
 
     void OnTriggerEnter (Collider collider) 
     {
         if (collider.CompareTag("Player"))
         {
+            outroText.SetActive(true);
             output.enabled = true;
             panel.enabled = true;
             output.text = dialogue[0];
@@ -47,7 +53,10 @@ public class TriggerDialogue : MonoBehaviour
                 output.enabled = false;
                 fpc.toggleDialogue();
 
-                Application.LoadLevel("MainScene");
+                if (outroText.activeInHierarchy == true)
+                {
+                    Application.LoadLevel("MainScene");
+                }
             }
         }
     }

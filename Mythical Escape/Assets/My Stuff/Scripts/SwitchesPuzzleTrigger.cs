@@ -4,7 +4,6 @@ using UnityEngine.UI;
 
 public class SwitchesPuzzleTrigger : MonoBehaviour
 {
-    private Component elMusico;
     private GameObject door;
 
     public string[] dialogue;
@@ -16,8 +15,6 @@ public class SwitchesPuzzleTrigger : MonoBehaviour
     void Awake()
     {
         door = GameObject.FindGameObjectWithTag("SF_Door2");
-        elMusico = GameObject.Find("FirstPersonCharacter").GetComponent<AudioSource>();
-        DontDestroyOnLoad(elMusico);
         panel = GameObject.FindGameObjectWithTag("Panel").GetComponent<Image>();
         output = GameObject.FindGameObjectWithTag("CandyText").GetComponent<Text>();
         panel.enabled = false;
@@ -34,9 +31,7 @@ public class SwitchesPuzzleTrigger : MonoBehaviour
 
     void OnTriggerEnter(Collider collider)
     {
-        //door.GetComponent<Animation>().Play("open");
-
-        if (collider.CompareTag("Player"))
+       if (collider.CompareTag("Player"))
         {
             output.enabled = true;
             panel.enabled = true;
@@ -46,7 +41,6 @@ public class SwitchesPuzzleTrigger : MonoBehaviour
 
     void OnTriggerExit(Collider collider)
     {
-        //door.GetComponent<Animation>().Play("close");
         if (collider.CompareTag("Player"))
         {
             output.enabled = false;

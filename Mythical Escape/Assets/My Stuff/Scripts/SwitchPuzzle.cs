@@ -26,6 +26,16 @@ public class SwitchPuzzle : MonoBehaviour
     private bool isUp4 = true;
     private bool isUp5 = true;
 
+    private Booleans bools;
+
+    //private GameObject elMusico;
+
+    void Awake()
+    {
+        bools = Component.FindObjectOfType<Booleans>();
+        //elMusico = GameObject.Find("Music");
+    }
+    
     private bool isCorrect()
     {
         if(switch1.transform.position != switch1CorrectPos.transform.position)
@@ -120,7 +130,8 @@ public class SwitchPuzzle : MonoBehaviour
 
             if(isCorrect())
             {
-                Application.LoadLevel("Shrooms");
+                bools.toggleDoor2();
+                Application.LoadLevel("MainScene");
             }
         }
     }

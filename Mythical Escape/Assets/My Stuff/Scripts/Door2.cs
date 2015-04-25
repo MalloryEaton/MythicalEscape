@@ -3,15 +3,28 @@ using System.Collections;
 
 public class Door2 : MonoBehaviour
 {
+    private Booleans bools;
+    private GameObject door;
+
+    void Awake()
+    {
+        bools = Component.FindObjectOfType<Booleans>();
+        door = GameObject.FindGameObjectWithTag("SF_Door2");
+    }
+
     void OnTriggerEnter(Collider collider)
     {
-        GameObject door = GameObject.FindGameObjectWithTag("SF_Door2");
-        door.GetComponent<Animation>().Play("open");
+        if (bools.door2())
+        {
+            door.GetComponent<Animation>().Play("open");
+        }
     }
 
     void OnTriggerExit(Collider collider)
     {
-        GameObject door = GameObject.FindGameObjectWithTag("SF_Door2");
-        door.GetComponent<Animation>().Play("close");
+        if (bools.door2())
+        {
+            door.GetComponent<Animation>().Play("close");
+        }
     }
 }
