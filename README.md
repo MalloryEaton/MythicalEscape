@@ -6,7 +6,8 @@ Final Game Dev. Project
 2. Brief summary of what the program does
     - This is a puzzle game that takes the player through a series of different puzzles such as riddles or sliding picture     games. Each puzzle allows the user to progress through the game and hopefully pick up clues that will lead them to the final scene and the character waiting for them there.
 3. List of any known bugs that still remain (hopefully none)
-    - ONE OF OUR PUZZLES (ONE OF THE FIRST ONES WE HAD WORKING) DECIDED TO STOP WORKING AT ABOUT 12:10AM. BY ALL LOGIC, THERE         IS NO REASON WHY IT WOULD HAVE STOPPED WORKING. WE DECIDED TO GIVE UP FOR TONIGHT AND TRY AGAIN TOMORROW. WE ARE VERY         ANGRY AT UNITY AT THIS TIME. GOOD NIGHT.
+    - final character disappears from view at certain camera angles
+    - can go to any door in any order
     - cheats for some puzzles are present from testing
     - The puzzles to unlock each door can be played from a different door by pressing the corrosponding number
 4. List what each teammate contributed (e.g., sprite sheet implementation, enemy AI, etc.)
@@ -58,3 +59,6 @@ Resources:
 - http://forum.unity3d.com/threads/application-loadlevel-application-loadedlevel-resets-level-but-causes-light-intensity-to-change.308248/
 - http://wallpaperus.org/wallpapers/04/138/gold-textures-2590x1940-wallpaper-1620494.jpg
 - http://sixtygig.com/junk/portal.gif
+- http://tf3dm.com/3d-model/kingston-flashdrive-71713.html
+- https://slm-assets0.secondlife.com/assets/2800804/lightbox/Silver%20Metal%201.jpg?1294561933
+- http://howcanthishappen.com/wp-content/uploads/2015/03/Rainbow-and-Pot-of-Gold.jpg
