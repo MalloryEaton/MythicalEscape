@@ -12,8 +12,8 @@ Final Game Dev. Project
     - Mallory: Placed the scenes(including the Maze), Sliding puzzle, Lever puzzle, Color puzzle, DREW THE BEARD, found/applied textures, Debugging
     - Catherine: Provided artistic help for the scenes, Music, Sound effects, Text (Mallory edited), Riddles, Debugging, wrote the read-me
 5. The percentage of work performed by each teammate
-    - Catherine: 
-    - Mallory:
+    - Catherine: 47%
+    - Mallory: 53%
 
 Resources:
 - http://unity3d.com/learn/tutorials/projects/stealth/single-doors
