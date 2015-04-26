@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine.UI;
 using UnityStandardAssets.Characters.FirstPerson;
 
-public class TriggerDialogue : MonoBehaviour 
+public class CandyLevelTriggerDialogue : MonoBehaviour 
 {
     public string[] dialogue;
     private Text output;
@@ -14,11 +14,9 @@ public class TriggerDialogue : MonoBehaviour
     private GameObject outroText;
 
     private bool isRiddle = false;
- 
+
     private int curLine = 0;
 
-    private SwitchPuzzle switchesPuzzle;
- 
     void Awake()
     {
         panel = GameObject.FindGameObjectWithTag("Panel").GetComponent<Image>();
@@ -30,7 +28,7 @@ public class TriggerDialogue : MonoBehaviour
         fpc = Component.FindObjectOfType<FirstPersonController>();
     }
 
-    void OnTriggerEnter (Collider collider) 
+    void OnTriggerEnter(Collider collider)
     {
         if (collider.CompareTag("Player"))
         {
@@ -40,18 +38,25 @@ public class TriggerDialogue : MonoBehaviour
             output.text = dialogue[0];
         }
     }
- 
-    void OnGUI() 
+
+    void OnGUI()
     {
-        if (output.enabled && Event.current.type == EventType.KeyDown && Event.current.keyCode == KeyCode.Return && !isRiddle) 
+        if (output.enabled && Event.current.type == EventType.KeyDown && Event.current.keyCode == KeyCode.Return && !isRiddle)
         {
             curLine++;
-            if (curLine < dialogue.Length) 
+            if (curLine < dialogue.Length)
             {
                 output.text = dialogue[curLine];
-                fpc.toggleDialogue();
-            } 
-            else 
+                if (curLine == 3)
+                {
+                    fpc.toggleMouseMovement();
+                }
+                if (curLine == 3 || curLine == 5 || curLine == 7)
+                {
+                    isRiddle = true;
+                }
+            }
+            else
             {
                 curLine = 0;
                 panel.enabled = false;
@@ -63,6 +68,15 @@ public class TriggerDialogue : MonoBehaviour
                     Application.LoadLevel("MainScene");
                 }
             }
+        }
+        else if (isRiddle && Event.current.type == EventType.KeyDown && Event.current.keyCode == KeyCode.Alpha1)
+        {
+            curLine++;
+            if (curLine < dialogue.Length)
+            {
+                output.text = dialogue[curLine];
+            }
+            isRiddle = false;
         }
     }
 }

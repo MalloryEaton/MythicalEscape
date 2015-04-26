@@ -15,17 +15,30 @@ public class ChangeColor : MonoBehaviour
 
     private CheckColorPuzzle ccp;
 
-    private Booleans bools;
+    public static bool puzzle3IsSolved;
 
-    //private GameObject elMusico;
+    private GameObject puzzle3;
+
+    void Awake()
+    {
+        puzzle3 = GameObject.Find("ColorPuzzle");
+        DontDestroyOnLoad(puzzle3);
+        if (!puzzle3IsSolved)
+        {
+            puzzle3IsSolved = false;
+        }
+    }
 
     void Start()
     {
-        //elMusico = GameObject.Find("Music");
         ccp = Component.FindObjectOfType<CheckColorPuzzle>();
-        bools = Component.FindObjectOfType<Booleans>();
         rend = GetComponent<Renderer>();
         rend.material.color = colors[Random.Range(0, colors.Length)];
+    }
+
+    public bool solved()
+    {
+        return puzzle3IsSolved;
     }
 
     void OnMouseUp()
@@ -48,7 +61,7 @@ public class ChangeColor : MonoBehaviour
 
             if (ccp.checkColors())
             {
-                bools.toggleDoor3();
+                puzzle3IsSolved = true;
                 Application.LoadLevel("MainScene");
             }
         }

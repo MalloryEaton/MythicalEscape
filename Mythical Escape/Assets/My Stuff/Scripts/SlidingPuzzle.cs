@@ -42,14 +42,23 @@ public class SlidingPuzzle : MonoBehaviour
     float xtemp;
     float ytemp;
 
-    private Booleans bools;
+    public static bool puzzle1IsSolved;
 
-    private GameObject elMusico;
+    private GameObject puzzle1;
+
+    public bool solved()
+    {
+        return puzzle1IsSolved;
+    }
 
     void Awake()
     {
-        bools = Component.FindObjectOfType<Booleans>();
-        //elMusico = GameObject.Find("Music");
+        puzzle1 = GameObject.Find("UnsolvedSlidingPuzzle");
+        DontDestroyOnLoad(puzzle1);
+        if (!puzzle1IsSolved)
+        {
+            puzzle1IsSolved = false;
+        }
     }
 
     void Update()
@@ -58,8 +67,7 @@ public class SlidingPuzzle : MonoBehaviour
         {
             solvePuzzle();
             puzzleIsWon = true;
-            bools.toggleDoor1();
-            //Destroy(elMusico);
+            puzzle1IsSolved = true;
             Application.LoadLevel("MainScene");
         }
     }
@@ -77,7 +85,7 @@ public class SlidingPuzzle : MonoBehaviour
         if(HasWon())
         {
             puzzleIsWon = true;
-            bools.toggleDoor1();
+            puzzle1IsSolved = true;
             Application.LoadLevel("MainScene");
         }
     }

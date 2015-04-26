@@ -4,17 +4,12 @@ using UnityEngine.UI;
 
 public class ColorPuzzleTrigger : MonoBehaviour
 {
-    private GameObject door;
-
     public string[] dialogue;
     private Text output;
     private Image panel;
 
-    private int curLine = 0;
-
     void Awake()
     {
-        door = GameObject.FindGameObjectWithTag("SF_Door3");
         panel = GameObject.FindGameObjectWithTag("Panel").GetComponent<Image>();
         output = GameObject.FindGameObjectWithTag("CandyText").GetComponent<Text>();
         panel.enabled = false;

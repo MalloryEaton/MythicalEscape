@@ -25950,6 +25950,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 936293077}
     m_Modifications:
+    - target: {fileID: 11466784, guid: 1a49e8b974a9ed0488d151bd1e014855, type: 2}
+      propertyPath: dialogue.Array.size
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 492654, guid: 1a49e8b974a9ed0488d151bd1e014855, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -25985,6 +25989,33 @@ Prefab:
     - target: {fileID: 13517240, guid: 1a49e8b974a9ed0488d151bd1e014855, type: 2}
       propertyPath: m_Radius
       value: 1.96997583
+      objectReference: {fileID: 0}
+    - target: {fileID: 11466784, guid: 1a49e8b974a9ed0488d151bd1e014855, type: 2}
+      propertyPath: dialogue.Array.data[0]
+      value: Wow, you're talking to me? No one ever talks to me!
+      objectReference: {fileID: 0}
+    - target: {fileID: 11466784, guid: 1a49e8b974a9ed0488d151bd1e014855, type: 2}
+      propertyPath: dialogue.Array.data[1]
+      value: Usually they just scream and run away... Hurts a guys feelings, ya know?
+      objectReference: {fileID: 0}
+    - target: {fileID: 11466784, guid: 1a49e8b974a9ed0488d151bd1e014855, type: 2}
+      propertyPath: dialogue.Array.data[2]
+      value: Well, I guess I can give you your reward now, although I don't know what
+        you are going to do with it...
+      objectReference: {fileID: 0}
+    - target: {fileID: 11466784, guid: 1a49e8b974a9ed0488d151bd1e014855, type: 2}
+      propertyPath: dialogue.Array.data[3]
+      value: '*Flash Drive Get!*'
+      objectReference: {fileID: 0}
+    - target: {fileID: 11466784, guid: 1a49e8b974a9ed0488d151bd1e014855, type: 2}
+      propertyPath: dialogue.Array.data[4]
+      value: I don't know how you are going to use it, though. I can't figure out
+        the password. Maybe all these shroom fumes are getting to me.
+      objectReference: {fileID: 0}
+    - target: {fileID: 11466784, guid: 1a49e8b974a9ed0488d151bd1e014855, type: 2}
+      propertyPath: dialogue.Array.data[5]
+      value: Since you're here, let me tell you about the time I hid a million dollars
+        under..............
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1a49e8b974a9ed0488d151bd1e014855, type: 2}
@@ -38704,8 +38735,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-  - asdfaWevds
-  - shrooms!!!!!!
+  - '*The voice comes to you again*'
+  - Colors in swamps seem so dull, but I'm sure you can find some color somewhere....
+  - Watch out for poison! No quenching your thirst in this realm!
+  - A guardian Angel is looking out for you, and it ain't Michael.
 --- !u!1 &1472315522
 GameObject:
   m_ObjectHideFlags: 0
@@ -39646,6 +39679,26 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11463432, guid: 38d91d0c4c8f59648a3047925508acb6, type: 2}
       propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11463432, guid: 38d91d0c4c8f59648a3047925508acb6, type: 2}
+      propertyPath: m_FontData.m_HorizontalOverflow
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22474828, guid: 38d91d0c4c8f59648a3047925508acb6, type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 800
+      objectReference: {fileID: 0}
+    - target: {fileID: 22416270, guid: 38d91d0c4c8f59648a3047925508acb6, type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 750
+      objectReference: {fileID: 0}
+    - target: {fileID: 22416270, guid: 38d91d0c4c8f59648a3047925508acb6, type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 31
+      objectReference: {fileID: 0}
+    - target: {fileID: 11463432, guid: 38d91d0c4c8f59648a3047925508acb6, type: 2}
+      propertyPath: m_FontData.m_Alignment
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -51041,6 +51094,26 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11460240, guid: f45ff4adfca07ba40ac80bbc79726a8e, type: 2}
       propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22471054, guid: f45ff4adfca07ba40ac80bbc79726a8e, type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 49.9999847
+      objectReference: {fileID: 0}
+    - target: {fileID: 22471054, guid: f45ff4adfca07ba40ac80bbc79726a8e, type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 800
+      objectReference: {fileID: 0}
+    - target: {fileID: 22488756, guid: f45ff4adfca07ba40ac80bbc79726a8e, type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 31
+      objectReference: {fileID: 0}
+    - target: {fileID: 22488756, guid: f45ff4adfca07ba40ac80bbc79726a8e, type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 750
+      objectReference: {fileID: 0}
+    - target: {fileID: 11460240, guid: f45ff4adfca07ba40ac80bbc79726a8e, type: 2}
+      propertyPath: m_FontData.m_Alignment
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

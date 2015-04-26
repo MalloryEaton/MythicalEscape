@@ -26,16 +26,25 @@ public class SwitchPuzzle : MonoBehaviour
     private bool isUp4 = true;
     private bool isUp5 = true;
 
-    private Booleans bools;
+    public static bool puzzle2IsSolved;
 
-    //private GameObject elMusico;
+    private GameObject puzzle2;
 
     void Awake()
     {
-        bools = Component.FindObjectOfType<Booleans>();
-        //elMusico = GameObject.Find("Music");
+        puzzle2 = GameObject.Find("Switch_Puzzle");
+        DontDestroyOnLoad(puzzle2);
+        if (!puzzle2IsSolved)
+        {
+            puzzle2IsSolved = false;
+        }
     }
-    
+
+    public bool solved()
+    {
+        return puzzle2IsSolved;
+    }
+
     private bool isCorrect()
     {
         if(switch1.transform.position != switch1CorrectPos.transform.position)
@@ -130,7 +139,7 @@ public class SwitchPuzzle : MonoBehaviour
 
             if(isCorrect())
             {
-                bools.toggleDoor2();
+                puzzle2IsSolved = true;
                 Application.LoadLevel("MainScene");
             }
         }

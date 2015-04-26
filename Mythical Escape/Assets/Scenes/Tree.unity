@@ -44,7 +44,7 @@ LevelGameManager:
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 5
-  m_GIWorkflowMode: 0
+  m_GIWorkflowMode: 1
   m_LightmapsMode: 1
   m_GISettings:
     serializedVersion: 2
@@ -68,7 +68,8 @@ LightmapSettings:
     m_TextureCompression: 1
     m_FinalGather: 0
     m_FinalGatherRayCount: 1024
-  m_LightmapSnapshot: {fileID: 0}
+  m_LightmapSnapshot: {fileID: 112000000, guid: 72f9f4d85dddea3469718f9c815200ca,
+    type: 2}
   m_RuntimeCPUUsage: 25
 --- !u!196 &5
 NavMeshSettings:
@@ -211,6 +212,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 11474758, guid: 85696d9c484c1d14cbd8caa872a447da, type: 2}
+      propertyPath: dialogue.Array.size
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 425596, guid: 85696d9c484c1d14cbd8caa872a447da, type: 2}
       propertyPath: m_LocalPosition.x
       value: 100
@@ -243,7 +248,49 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 13545740, guid: 85696d9c484c1d14cbd8caa872a447da, type: 2}
+      propertyPath: m_Radius
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 11474758, guid: 85696d9c484c1d14cbd8caa872a447da, type: 2}
+      propertyPath: dialogue.Array.data[0]
+      value: Well it seems that you have completed all of the puzzles except one.
+        What is my name?
+      objectReference: {fileID: 0}
+    - target: {fileID: 11474758, guid: 85696d9c484c1d14cbd8caa872a447da, type: 2}
+      propertyPath: dialogue.Array.data[2]
+      value: Did you like my games? I hope you had a lot of fun. I had a lot of fun
+        watching you.
+      objectReference: {fileID: 0}
+    - target: {fileID: 11474758, guid: 85696d9c484c1d14cbd8caa872a447da, type: 2}
+      propertyPath: dialogue.Array.data[1]
+      value: Did you guess it? It is Gabriel Foust! Or, as I'm affectionately called,
+        The Mythical Foust!
+      objectReference: {fileID: 0}
+    - target: {fileID: 11474758, guid: 85696d9c484c1d14cbd8caa872a447da, type: 2}
+      propertyPath: dialogue.Array.data[3]
+      value: Too creepy? Sorry. I haven't gotten out in a while. Doctorates take time.
+        And those theses....
+      objectReference: {fileID: 0}
+    - target: {fileID: 11474758, guid: 85696d9c484c1d14cbd8caa872a447da, type: 2}
+      propertyPath: dialogue.Array.data[4]
+      value: Well.... That's it. That's all I got. Mythical enough for ya?
+      objectReference: {fileID: 0}
+    - target: {fileID: 11474758, guid: 85696d9c484c1d14cbd8caa872a447da, type: 2}
+      propertyPath: dialogue.Array.data[5]
+      value: Thanks for bringing me all this stuff, by the way.
+      objectReference: {fileID: 0}
+    - target: {fileID: 11474758, guid: 85696d9c484c1d14cbd8caa872a447da, type: 2}
+      propertyPath: dialogue.Array.data[6]
+      value: I was beginning to think no one was skilled enough to complete my puzzles.
+      objectReference: {fileID: 0}
+    - target: {fileID: 11474758, guid: 85696d9c484c1d14cbd8caa872a447da, type: 2}
+      propertyPath: dialogue.Array.data[7]
+      value: In the words of Dr. Coach Rags, You are a stud. Congrats! Now go home
+        and take a nap.
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 11474758, guid: 85696d9c484c1d14cbd8caa872a447da, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 85696d9c484c1d14cbd8caa872a447da, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &658936435
@@ -412,88 +459,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 514436108}
   m_RootOrder: 3
---- !u!1001 &1113076244
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 22410068, guid: 6d2f48d5ac4fb15479fd536dc8383f9b, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 22410068, guid: 6d2f48d5ac4fb15479fd536dc8383f9b, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 22410068, guid: 6d2f48d5ac4fb15479fd536dc8383f9b, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 22410068, guid: 6d2f48d5ac4fb15479fd536dc8383f9b, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 22410068, guid: 6d2f48d5ac4fb15479fd536dc8383f9b, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 22410068, guid: 6d2f48d5ac4fb15479fd536dc8383f9b, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 22410068, guid: 6d2f48d5ac4fb15479fd536dc8383f9b, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 22410068, guid: 6d2f48d5ac4fb15479fd536dc8383f9b, type: 2}
-      propertyPath: m_RootOrder
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 22410068, guid: 6d2f48d5ac4fb15479fd536dc8383f9b, type: 2}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 22410068, guid: 6d2f48d5ac4fb15479fd536dc8383f9b, type: 2}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 22410068, guid: 6d2f48d5ac4fb15479fd536dc8383f9b, type: 2}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 22410068, guid: 6d2f48d5ac4fb15479fd536dc8383f9b, type: 2}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 22410068, guid: 6d2f48d5ac4fb15479fd536dc8383f9b, type: 2}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 22410068, guid: 6d2f48d5ac4fb15479fd536dc8383f9b, type: 2}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 22410068, guid: 6d2f48d5ac4fb15479fd536dc8383f9b, type: 2}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 22410068, guid: 6d2f48d5ac4fb15479fd536dc8383f9b, type: 2}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 22410068, guid: 6d2f48d5ac4fb15479fd536dc8383f9b, type: 2}
-      propertyPath: m_Pivot.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 22410068, guid: 6d2f48d5ac4fb15479fd536dc8383f9b, type: 2}
-      propertyPath: m_Pivot.y
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 6d2f48d5ac4fb15479fd536dc8383f9b, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &1159591350
 GameObject:
   m_ObjectHideFlags: 0
@@ -693,6 +658,35 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 22.4368591, y: 2.70895386, z: 1}
   m_Center: {x: 10.7184362, y: .854476929, z: 0}
+--- !u!1 &1946428574
+GameObject:
+  m_PrefabParentObject: {fileID: 139976, guid: 85696d9c484c1d14cbd8caa872a447da, type: 2}
+  m_PrefabInternal: {fileID: 628162909}
+--- !u!114 &1946428576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1946428574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e6755b04c816154e989673a32b5ec9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+  - Well it seems that you have completed all of the puzzles except one. What is my
+    name?
+  - Did you guess it? It is Gabriel Foust! Or, as I'm affectionately called, The Mythical
+    Foust!
+  - Did you like my games? I hope you had a lot of fun. I had a lot of fun watching
+    you.
+  - Too creepy? Sorry. I haven't gotten out in a while. Doctorates take time. And
+    those theses....
+  - Well.... That's it. That's all I got. Mythical enough for ya?
+  - Thanks for bringing me all this stuff, by the way.
+  - I was beginning to think no one was skilled enough to complete my puzzles.
+  - In the words of Dr. Coach Rags, You are a stud. Congrats! Now go home and take
+    a nap.
 --- !u!1001 &2119414688
 Prefab:
   m_ObjectHideFlags: 0
@@ -734,4 +728,126 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3b5d9afdaddbf25418bd8ded9e86d5ec, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &2141977215
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 22429984, guid: f45ff4adfca07ba40ac80bbc79726a8e, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22429984, guid: f45ff4adfca07ba40ac80bbc79726a8e, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22429984, guid: f45ff4adfca07ba40ac80bbc79726a8e, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22429984, guid: f45ff4adfca07ba40ac80bbc79726a8e, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22429984, guid: f45ff4adfca07ba40ac80bbc79726a8e, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22429984, guid: f45ff4adfca07ba40ac80bbc79726a8e, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22429984, guid: f45ff4adfca07ba40ac80bbc79726a8e, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 22429984, guid: f45ff4adfca07ba40ac80bbc79726a8e, type: 2}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 22429984, guid: f45ff4adfca07ba40ac80bbc79726a8e, type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22429984, guid: f45ff4adfca07ba40ac80bbc79726a8e, type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22429984, guid: f45ff4adfca07ba40ac80bbc79726a8e, type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22429984, guid: f45ff4adfca07ba40ac80bbc79726a8e, type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22429984, guid: f45ff4adfca07ba40ac80bbc79726a8e, type: 2}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22429984, guid: f45ff4adfca07ba40ac80bbc79726a8e, type: 2}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22429984, guid: f45ff4adfca07ba40ac80bbc79726a8e, type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22429984, guid: f45ff4adfca07ba40ac80bbc79726a8e, type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22429984, guid: f45ff4adfca07ba40ac80bbc79726a8e, type: 2}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22429984, guid: f45ff4adfca07ba40ac80bbc79726a8e, type: 2}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11454044, guid: f45ff4adfca07ba40ac80bbc79726a8e, type: 2}
+      propertyPath: m_Color.r
+      value: .062068969
+      objectReference: {fileID: 0}
+    - target: {fileID: 11454044, guid: f45ff4adfca07ba40ac80bbc79726a8e, type: 2}
+      propertyPath: m_Color.g
+      value: .529411793
+      objectReference: {fileID: 0}
+    - target: {fileID: 11454044, guid: f45ff4adfca07ba40ac80bbc79726a8e, type: 2}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22471054, guid: f45ff4adfca07ba40ac80bbc79726a8e, type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 800
+      objectReference: {fileID: 0}
+    - target: {fileID: 22488756, guid: f45ff4adfca07ba40ac80bbc79726a8e, type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 750
+      objectReference: {fileID: 0}
+    - target: {fileID: 22488756, guid: f45ff4adfca07ba40ac80bbc79726a8e, type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 11460240, guid: f45ff4adfca07ba40ac80bbc79726a8e, type: 2}
+      propertyPath: m_FontData.m_HorizontalOverflow
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11460240, guid: f45ff4adfca07ba40ac80bbc79726a8e, type: 2}
+      propertyPath: m_FontData.m_VerticalOverflow
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11460240, guid: f45ff4adfca07ba40ac80bbc79726a8e, type: 2}
+      propertyPath: m_FontData.m_Alignment
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 124994, guid: f45ff4adfca07ba40ac80bbc79726a8e, type: 2}
+      propertyPath: m_TagString
+      value: SpeechDetector
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: f45ff4adfca07ba40ac80bbc79726a8e, type: 2}
   m_IsPrefabParent: 0

@@ -3,18 +3,18 @@ using System.Collections;
 
 public class Door1 : MonoBehaviour 
 {
-    private Booleans bools;
     private GameObject door;
+    private SlidingPuzzle slidingPuzzle;
 
     void Awake()
     {
-        bools = Component.FindObjectOfType<Booleans>();
         door = GameObject.FindGameObjectWithTag("SF_Door1");
+        slidingPuzzle = GameObject.FindObjectOfType<SlidingPuzzle>();
     }
 
     void OnTriggerEnter(Collider collider)
     {
-        if (bools.door1())
+        if (collider.CompareTag("Player") && slidingPuzzle.solved())
         {
             door.GetComponent<Animation>().Play("open");
         }
@@ -22,7 +22,7 @@ public class Door1 : MonoBehaviour
 
     void OnTriggerExit(Collider collider)
     {
-        if (bools.door1())
+        if (collider.CompareTag("Player") && slidingPuzzle.solved())
         {
             door.GetComponent<Animation>().Play("close");
         }

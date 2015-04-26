@@ -29,6 +29,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         [SerializeField] private AudioClip m_LandSound;           // the sound played when character touches back on ground.
         
         private bool dialogue;
+        private bool mouseCanMove;
 
         private Camera m_Camera;
         private bool m_Jump;
@@ -58,13 +59,17 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_AudioSource = GetComponent<AudioSource>();
 			m_MouseLook.Init(transform , m_Camera.transform);
             dialogue = false;
+            mouseCanMove = true;
         }
 
 
         // Update is called once per frame
         private void Update()
         {
-            RotateView();
+            if (mouseCanMove)
+            {
+                RotateView();
+            }
             // the jump state needs to read here to make sure it is not missed
             if (!m_Jump)
             {
@@ -272,6 +277,11 @@ namespace UnityStandardAssets.Characters.FirstPerson
         public void toggleDialogue()
         {
             dialogue = !dialogue;
+        }
+
+        public void toggleMouseMovement()
+        {
+            mouseCanMove = false;
         }
     }
 }
