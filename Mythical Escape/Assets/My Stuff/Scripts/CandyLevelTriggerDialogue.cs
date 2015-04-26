@@ -10,18 +10,19 @@ public class CandyLevelTriggerDialogue : MonoBehaviour
     private Image panel;
     private FirstPersonController fpc;
 
-    private GameObject introText;
     private GameObject outroText;
 
     private bool isRiddle = false;
 
     private int curLine = 0;
 
+    private GameObject potOfGold;
+
     void Awake()
     {
         panel = GameObject.FindGameObjectWithTag("Panel").GetComponent<Image>();
         output = GameObject.FindGameObjectWithTag("CandyText").GetComponent<Text>();
-        introText = GameObject.Find("IntroSpeech");
+        potOfGold = GameObject.FindGameObjectWithTag("Gold");
         outroText = GameObject.Find("OutroSpeech");
         panel.enabled = false;
         output.enabled = false;
@@ -54,6 +55,10 @@ public class CandyLevelTriggerDialogue : MonoBehaviour
                 if (curLine == 3 || curLine == 5 || curLine == 7)
                 {
                     isRiddle = true;
+                }
+                if(curLine == 10)
+                {
+                    Destroy(potOfGold);
                 }
             }
             else

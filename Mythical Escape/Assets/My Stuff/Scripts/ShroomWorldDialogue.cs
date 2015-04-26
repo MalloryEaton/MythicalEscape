@@ -58,6 +58,7 @@ public class ShroomWorldDialogue : MonoBehaviour
                 Coutput.enabled = false;
                 fpc.toggleDialogue();
                 introText.SetActive(false);
+                outroText.SetActive(true);
             }
         }
     }

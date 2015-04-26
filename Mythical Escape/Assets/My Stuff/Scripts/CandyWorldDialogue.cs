@@ -9,8 +9,6 @@ public class CandyWorldDialogue : MonoBehaviour
     private Text Coutput;
     private Image Cpanel;
     private FirstPersonController fpc;
-
-    private GameObject introText;
     private GameObject outroText;
 
     private int curLine = 0;
@@ -19,15 +17,13 @@ public class CandyWorldDialogue : MonoBehaviour
     {
         Cpanel = GameObject.Find("CandyPanel").GetComponent<Image>();
         Coutput = GameObject.Find("CandyText").GetComponent<Text>();
-        introText = GameObject.Find("IntroSpeech");
         outroText = GameObject.Find("OutroSpeech");
         fpc = Component.FindObjectOfType<FirstPersonController>();
     }
 
     void Start()
     {
-        introText.SetActive(true);
-        outroText.SetActive(false);
+        outroText.SetActive(true);
         Coutput.enabled = false;
         Cpanel.enabled = false;
     }
@@ -57,7 +53,6 @@ public class CandyWorldDialogue : MonoBehaviour
                 Cpanel.enabled = false;
                 Coutput.enabled = false;
                 fpc.toggleDialogue();
-                introText.SetActive(false);
             }
         }
     }

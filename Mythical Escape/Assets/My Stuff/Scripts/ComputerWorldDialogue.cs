@@ -9,25 +9,24 @@ public class ComputerWorldDialogue : MonoBehaviour
     private Text Coutput;
     private Image Cpanel;
     private FirstPersonController fpc;
-
-    private GameObject introText;
     private GameObject outroText;
 
     private int curLine = 0;
 
+    private GameObject easel;
+
     void Awake()
     {
-        Cpanel = GameObject.Find("ComputerPanel").GetComponent<Image>();
-        Coutput = GameObject.Find("ComputerText").GetComponent<Text>();
-        introText = GameObject.Find("IntroSpeech");
+        Cpanel = GameObject.Find("Panel").GetComponent<Image>();
+        Coutput = GameObject.Find("Text").GetComponent<Text>();
         outroText = GameObject.Find("OutroSpeech");
         fpc = Component.FindObjectOfType<FirstPersonController>();
+        easel = GameObject.FindGameObjectWithTag("Easel");
     }
 
     void Start()
     {
-        introText.SetActive(true);
-        outroText.SetActive(false);
+        outroText.SetActive(true);
         Coutput.enabled = false;
         Cpanel.enabled = false;
     }
@@ -50,6 +49,10 @@ public class ComputerWorldDialogue : MonoBehaviour
             if (curLine < dialogue.Length)
             {
                 Coutput.text = dialogue[curLine];
+                if(curLine == 4)
+                {
+                    Destroy(easel);
+                }
             }
             else
             {
@@ -57,7 +60,11 @@ public class ComputerWorldDialogue : MonoBehaviour
                 Cpanel.enabled = false;
                 Coutput.enabled = false;
                 fpc.toggleDialogue();
-                introText.SetActive(false);
+
+                if (outroText.activeInHierarchy == true)
+                {
+                    Application.LoadLevel("MainScene");
+                }
             }
         }
     }

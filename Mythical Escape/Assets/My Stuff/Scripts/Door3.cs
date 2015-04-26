@@ -4,20 +4,17 @@ using System.Collections;
 public class Door3 : MonoBehaviour
 {
     private GameObject door;
-    private ChangeColor colorPuzzle;
+    private GameObject colorPuzzle;
 
     void Awake()
     {
         door = GameObject.FindGameObjectWithTag("SF_Door3");
-        if (GameObject.FindObjectOfType<ChangeColor>())
-        {
-            colorPuzzle = GameObject.FindObjectOfType<ChangeColor>();
-        }
+        colorPuzzle = GameObject.FindGameObjectWithTag("ColorPuzzle");
     }
 
     void OnTriggerEnter(Collider collider)
     {
-        if (colorPuzzle && collider.CompareTag("Player") && colorPuzzle.solved())
+        if (colorPuzzle && collider.CompareTag("Player"))
         {
             door.GetComponent<Animation>().Play("open");
         }
@@ -25,7 +22,7 @@ public class Door3 : MonoBehaviour
 
     void OnTriggerExit(Collider collider)
     {
-        if (colorPuzzle && collider.CompareTag("Player") && colorPuzzle.solved())
+        if (colorPuzzle && collider.CompareTag("Player"))
         {
             door.GetComponent<Animation>().Play("close");
         }

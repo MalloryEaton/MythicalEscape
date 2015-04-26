@@ -10,7 +10,6 @@ public class TriggerDialogue : MonoBehaviour
     private Image panel;
     private FirstPersonController fpc;
 
-    private GameObject introText;
     private GameObject outroText;
 
     private bool isRiddle = false;
@@ -18,16 +17,18 @@ public class TriggerDialogue : MonoBehaviour
     private int curLine = 0;
 
     private SwitchPuzzle switchesPuzzle;
+    private GameObject flashDrive;
+
  
     void Awake()
     {
         panel = GameObject.FindGameObjectWithTag("Panel").GetComponent<Image>();
         output = GameObject.FindGameObjectWithTag("CandyText").GetComponent<Text>();
-        introText = GameObject.Find("IntroSpeech");
         outroText = GameObject.Find("OutroSpeech");
         panel.enabled = false;
         output.enabled = false;
         fpc = Component.FindObjectOfType<FirstPersonController>();
+        flashDrive = GameObject.FindGameObjectWithTag("FlashDrive");
     }
 
     void OnTriggerEnter (Collider collider) 
@@ -50,6 +51,11 @@ public class TriggerDialogue : MonoBehaviour
             {
                 output.text = dialogue[curLine];
                 fpc.toggleDialogue();
+
+                if (curLine == 3 && outroText.activeInHierarchy == true)
+                {
+                    Destroy(flashDrive);
+                }
             } 
             else 
             {

@@ -74,10 +74,13 @@ public class SlidingPuzzle : MonoBehaviour
 
     void OnMouseUp()
     {
+        xtemp = transform.localPosition.x;
         if (Vector3.Distance(transform.localPosition, slot.transform.position) == 1 && !puzzleIsWon)
         {
+            
             xtemp = transform.localPosition.x;
             ytemp = transform.localPosition.y;
+            Debug.Log("xpos " + xtemp);
             transform.localPosition = new Vector3(slot.transform.position.x, slot.transform.position.y, 0);
             slot.transform.position = new Vector3(xtemp, ytemp, 0);
         }

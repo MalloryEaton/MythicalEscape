@@ -19,11 +19,8 @@ public class ChangeColor : MonoBehaviour
 
     private GameObject puzzle3;
 
-    private Renderer renderer1;
-
     void Awake()
     {
-        renderer1 = cube1.GetComponent<Renderer>();
         puzzle3 = GameObject.Find("ColorPuzzle");
         DontDestroyOnLoad(puzzle3);
         if (!puzzle3IsSolved)
@@ -37,8 +34,6 @@ public class ChangeColor : MonoBehaviour
         ccp = Component.FindObjectOfType<CheckColorPuzzle>();
         rend = GetComponent<Renderer>();
         rend.material.color = colors[Random.Range(0, colors.Length)];
-
-        renderer1.material.color = colors[0];
     }
 
     public bool solved()
@@ -51,19 +46,16 @@ public class ChangeColor : MonoBehaviour
         if (!ccp.checkColors())
         {
             xPos = transform.localPosition.x;
-            if (xPos - cube1.transform.position.x > 0.1)
+            if (xPos == cube1.transform.position.x)
             {
-                Debug.Log("adsfasdf");
                 changeColor();
             }
-            if (xPos - cube2.transform.position.x < 0.1)
+            else if (xPos == cube2.transform.position.x)
             {
-                Debug.Log("cube 2");
                 changeColor();
             }
-            if (xPos - cube3.transform.position.x < 0.1)
+            else if (xPos == cube3.transform.position.x)
             {
-                Debug.Log("cube 3");
                 changeColor();
             }
 

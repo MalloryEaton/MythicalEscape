@@ -16,9 +16,10 @@ public class SwitchPuzzle : MonoBehaviour
     public GameObject switch5CorrectPos;
 
     float xPos;
+    float yPos;
     float zPos;
     float yUP = 0.28f;
-    float yDown = -0.25f;
+    float yDown = 0.25f;
 
     private bool isUp1 = true;
     private bool isUp2 = true;
@@ -75,17 +76,18 @@ public class SwitchPuzzle : MonoBehaviour
         if (!isCorrect())
         {
             xPos = transform.localPosition.x;
+            yPos = 26;
             zPos = transform.localPosition.z;
             if (xPos == switch1.transform.position.x)
             {
                 isUp1 = !isUp1;
                 if (isUp1)
                 {
-                    switch1.transform.position = new Vector3(xPos, yDown, zPos);
+                    switch1.transform.position = new Vector3(xPos, yPos - yDown, zPos);
                 }
                 else
                 {
-                    switch1.transform.position = new Vector3(xPos, yUP, zPos);
+                    switch1.transform.position = new Vector3(xPos, yPos + yUP, zPos);
                 }
             }
             else if (xPos == switch2.transform.position.x)
@@ -93,11 +95,11 @@ public class SwitchPuzzle : MonoBehaviour
                 isUp2 = !isUp2;
                 if (isUp2)
                 {
-                    switch2.transform.position = new Vector3(xPos, yDown, zPos);
+                    switch2.transform.position = new Vector3(xPos, yPos - yDown, zPos);
                 }
                 else
                 {
-                    switch2.transform.position = new Vector3(xPos, yUP, zPos);
+                    switch2.transform.position = new Vector3(xPos, yPos + yUP, zPos);
                 }
             }
             else if (xPos == switch3.transform.position.x)
@@ -105,11 +107,11 @@ public class SwitchPuzzle : MonoBehaviour
                 isUp3 = !isUp3;
                 if (isUp3)
                 {
-                    switch3.transform.position = new Vector3(xPos, yDown, zPos);
+                    switch3.transform.position = new Vector3(xPos, yPos - yDown, zPos);
                 }
                 else
                 {
-                    switch3.transform.position = new Vector3(xPos, yUP, zPos);
+                    switch3.transform.position = new Vector3(xPos, yPos + yUP, zPos);
                 }
             }
             else if (xPos == switch4.transform.position.x)
@@ -117,11 +119,11 @@ public class SwitchPuzzle : MonoBehaviour
                 isUp4 = !isUp4;
                 if (isUp4)
                 {
-                    switch4.transform.position = new Vector3(xPos, yDown, zPos);
+                    switch4.transform.position = new Vector3(xPos, yPos - yDown, zPos);
                 }
                 else
                 {
-                    switch4.transform.position = new Vector3(xPos, yUP, zPos);
+                    switch4.transform.position = new Vector3(xPos, yPos + yUP, zPos);
                 }
             }
             else if (xPos == switch5.transform.position.x)
@@ -129,11 +131,11 @@ public class SwitchPuzzle : MonoBehaviour
                 isUp5 = !isUp5;
                 if (isUp5)
                 {
-                    switch5.transform.position = new Vector3(xPos, yDown, zPos);
+                    switch5.transform.position = new Vector3(xPos, yPos - yDown, zPos);
                 }
                 else
                 {
-                    switch5.transform.position = new Vector3(xPos, yUP, zPos);
+                    switch5.transform.position = new Vector3(xPos, yPos + yUP, zPos);
                 }
             }
 

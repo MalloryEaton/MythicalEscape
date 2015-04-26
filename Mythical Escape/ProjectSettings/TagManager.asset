@@ -15,6 +15,9 @@ TagManager:
   - SwitchesPuzzle
   - ColorPuzzle
   - Tree
+  - Gold
+  - Easel
+  - FlashDrive
   layers:
   - Default
   - TransparentFX

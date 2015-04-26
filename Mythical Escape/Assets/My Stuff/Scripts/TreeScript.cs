@@ -5,7 +5,7 @@ public class TreeScript : MonoBehaviour
 {
     private SlidingPuzzle slidingPuzzle;
     private SwitchPuzzle switchesPuzzle;
-    private ChangeColor colorPuzzle;
+    private GameObject colorPuzzle;
 
     private GameObject player;
 
@@ -16,18 +16,19 @@ public class TreeScript : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         slidingPuzzle = GameObject.FindObjectOfType<SlidingPuzzle>();
         switchesPuzzle = GameObject.FindObjectOfType<SwitchPuzzle>();
-        colorPuzzle = GameObject.FindObjectOfType<ChangeColor>();
+        colorPuzzle = GameObject.FindGameObjectWithTag("ColorPuzzle");
 
         treeCollider = GameObject.FindGameObjectWithTag("Tree").GetComponent<Collider>();
 
-        if (colorPuzzle)
+        if (slidingPuzzle && switchesPuzzle && colorPuzzle)
         {
             Destroy(treeCollider);
         }
 
-        if (colorPuzzle && colorPuzzle.solved())
+        if (colorPuzzle)
         {
             player.transform.position = new Vector3(70, 9, 86);
+            player.transform.Rotate(0, 20f, 0);
         }
         else if (switchesPuzzle.solved())
         {
@@ -36,6 +37,7 @@ public class TreeScript : MonoBehaviour
         else if (slidingPuzzle.solved())
         {
             player.transform.position = new Vector3(-48, 9, 86);
+            player.transform.Rotate(0, -37f, 0);
         }
     }
 

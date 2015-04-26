@@ -10,7 +10,6 @@ public class EndSceneScript : MonoBehaviour
     private Image panel;
     private FirstPersonController fpc;
 
-    private GameObject introText;
     private GameObject outroText;
 
     private bool isRiddle = false;
@@ -23,7 +22,6 @@ public class EndSceneScript : MonoBehaviour
     {
         panel = GameObject.FindGameObjectWithTag("Panel").GetComponent<Image>();
         output = GameObject.FindGameObjectWithTag("CandyText").GetComponent<Text>();
-        introText = GameObject.Find("IntroSpeech");
         outroText = GameObject.Find("OutroSpeech");
         panel.enabled = false;
         output.enabled = false;

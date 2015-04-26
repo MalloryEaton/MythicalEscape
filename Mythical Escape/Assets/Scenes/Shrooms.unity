@@ -44,7 +44,7 @@ LevelGameManager:
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 5
-  m_GIWorkflowMode: 0
+  m_GIWorkflowMode: 1
   m_LightmapsMode: 1
   m_GISettings:
     serializedVersion: 2
@@ -68,7 +68,8 @@ LightmapSettings:
     m_TextureCompression: 1
     m_FinalGather: 0
     m_FinalGatherRayCount: 1024
-  m_LightmapSnapshot: {fileID: 0}
+  m_LightmapSnapshot: {fileID: 112000000, guid: 9cf0d153ae88e4b4dbda6da47b892d37,
+    type: 2}
   m_RuntimeCPUUsage: 25
 --- !u!196 &5
 NavMeshSettings:
@@ -3883,6 +3884,50 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 109743697}
   m_Mesh: {fileID: 4300000, guid: 0a15c173d3c31a344ac70bc791350f35, type: 3}
+--- !u!1 &110248971
+GameObject:
+  m_PrefabParentObject: {fileID: 159846, guid: 1a49e8b974a9ed0488d151bd1e014855, type: 2}
+  m_PrefabInternal: {fileID: 866505847}
+--- !u!114 &110248973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 110248971}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55ad047b54d3520438137fef8b38ab7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+  - Wow, you're talking to me? No one ever talks to me!
+  - Usually they just scream and run away... Hurts a guys feelings, ya know?
+  - Well, I guess I can give you your reward now, although I don't know what you are
+    going to do with it...
+  - '*Flash Drive Get!*'
+  - I don't know how you are going to use it, though. I can't figure out the password.
+    Maybe all these shroom fumes are getting to me.
+  - Since you're here, let me tell you about the time I hid a million dollars under..............
+--- !u!114 &110248975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 110248971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b9ae04f4951d18488c4d8e7b01d7e85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+  - Wow, you're talking to me? No one ever talks to me!
+  - Usually they just scream and run away... Hurts a guys feelings, ya know?
+  - Well, I guess I can give you your reward now, although I don't know what you are
+    going to do with it...
+  - '*Flash Drive Get!*'
+  - I don't know how you are going to use it, though. I can't figure out the password.
+    Maybe all these shroom fumes are getting to me.
+  - Since you're here, let me tell you about the time I hid a million dollars under..............
 --- !u!1 &112803646
 GameObject:
   m_ObjectHideFlags: 0
@@ -26017,7 +26062,8 @@ Prefab:
       value: Since you're here, let me tell you about the time I hid a million dollars
         under..............
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 11466784, guid: 1a49e8b974a9ed0488d151bd1e014855, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 1a49e8b974a9ed0488d151bd1e014855, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &868078508
@@ -36977,7 +37023,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: de285b9033b32094b87abaab7b635e8e, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: .300000012
+  m_Volume: .400000006
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -38738,7 +38784,8 @@ MonoBehaviour:
   - '*The voice comes to you again*'
   - Colors in swamps seem so dull, but I'm sure you can find some color somewhere....
   - Watch out for poison! No quenching your thirst in this realm!
-  - A guardian Angel is looking out for you, and it ain't Michael.
+  - A guardian Angel is looking out for you. What was his name? It wasn't Michael...
+  - Oh, I'm sure you'll figure it out. Off you go!
 --- !u!1 &1472315522
 GameObject:
   m_ObjectHideFlags: 0
@@ -46560,6 +46607,64 @@ Transform:
   - {fileID: 874709557}
   m_Father: {fileID: 2063531647}
   m_RootOrder: 8
+--- !u!1001 &1751382439
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400974, guid: d0d5959e5a79bfe45a5378098e1881aa, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 197.309998
+      objectReference: {fileID: 0}
+    - target: {fileID: 400974, guid: d0d5959e5a79bfe45a5378098e1881aa, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 400974, guid: d0d5959e5a79bfe45a5378098e1881aa, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 442.100006
+      objectReference: {fileID: 0}
+    - target: {fileID: 400974, guid: d0d5959e5a79bfe45a5378098e1881aa, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400974, guid: d0d5959e5a79bfe45a5378098e1881aa, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400974, guid: d0d5959e5a79bfe45a5378098e1881aa, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400974, guid: d0d5959e5a79bfe45a5378098e1881aa, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400974, guid: d0d5959e5a79bfe45a5378098e1881aa, type: 2}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 400974, guid: d0d5959e5a79bfe45a5378098e1881aa, type: 2}
+      propertyPath: m_LocalScale.x
+      value: .0500000007
+      objectReference: {fileID: 0}
+    - target: {fileID: 400974, guid: d0d5959e5a79bfe45a5378098e1881aa, type: 2}
+      propertyPath: m_LocalScale.y
+      value: .0500000007
+      objectReference: {fileID: 0}
+    - target: {fileID: 400974, guid: d0d5959e5a79bfe45a5378098e1881aa, type: 2}
+      propertyPath: m_LocalScale.z
+      value: .0500000007
+      objectReference: {fileID: 0}
+    - target: {fileID: 165462, guid: d0d5959e5a79bfe45a5378098e1881aa, type: 2}
+      propertyPath: m_TagString
+      value: FlashDrive
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: d0d5959e5a79bfe45a5378098e1881aa, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1751708894
 GameObject:
   m_ObjectHideFlags: 0
