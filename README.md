@@ -7,6 +7,7 @@ Final Game Dev. Project
     - This is a puzzle game that takes the player through a series of different puzzles such as riddles or sliding picture     games. Each puzzle allows the user to progress through the game and hopefully pick up clues that will lead them to the final scene and the character waiting for them there.
 3. List of any known bugs that still remain (hopefully none)
     - final character disappears from view at certain camera angles
+    - Text for candy world isn't in the right position in the build. It is fine in the unity editor, but when we build it, it is not.
     - can go to any door in any order
     - cheats for some puzzles are present from testing
     - The puzzles to unlock each door can be played from a different door by pressing the corrosponding number
